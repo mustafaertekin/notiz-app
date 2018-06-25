@@ -42,14 +42,3 @@ function remove(id) {
             })
             .then(response => response.json());
 }
-
-function showNotes(dataToShow) {
-    $(".nav").empty();
-    console.log(dataToShow);
-    dataToShow.data.forEach(function (pNote) {
-        var title = pNote.title;
-        var body = pNote.desc;
-
-        $(".nav").append(`<h3>${title}</h3><p>${body}</p><hr/>`);
-    });
-}
