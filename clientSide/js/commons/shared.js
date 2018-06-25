@@ -1,5 +1,5 @@
 // Revealing Module Pattern (less use of the global scope)
-var commons =
+let commons =
     ( function(){
 
         function LocalStorageService () {

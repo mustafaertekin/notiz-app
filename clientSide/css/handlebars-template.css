@@ -80,3 +80,9 @@
     justify-content: flex-end;
     align-items: center;
 }
+
+#desc-area {
+    overflow-y: scroll;
+    height: 50x;
+    resize: none;
+}

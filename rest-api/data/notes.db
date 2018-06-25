@@ -1,3 +1,10 @@
 {"_id":"MBlRkTLpqqcemsA6","title":"Sample Note 2","desc":"This is the description of note 2","dueDate":"2018-06-22","priority":"2","isFinished":true,"checkedFinished":"2018-06-25T02:15:44.175Z"}
-{"title":"Sample Note 1","desc":"Lorem ipsum...","dueDate":"2018-06-14","priority":"3","_id":"Zxv3AHtF0SHId8By"}
+{"title":"Sample Note 1","desc":"Lorem ipsum...","dueDate":"2018-06-14","priority":"3","_id":"Zxv3AHtF0SHId8By","isFinished":true,"checkedFinished":"2018-06-25T20:30:53.755Z"}
 {"title":"Sample Note 3","desc":"Todo or not Todo..","dueDate":"2018-06-28","priority":"1","_id":"j6joqowzAqFa48eU"}
+{"title":"","desc":"","dueDate":"","priority":"1","_id":"u39UsGll1RB42DPL"}
+{"title":"","desc":"","dueDate":"","priority":"1","_id":"E3C60UzhvMSC370t"}
+{"title":"","desc":"","dueDate":"","priority":"1","_id":"1l0X89tBNJTFavRm"}
+{"$$deleted":true,"_id":"E3C60UzhvMSC370t"}
+{"$$deleted":true,"_id":"1l0X89tBNJTFavRm"}
+{"$$deleted":true,"_id":"u39UsGll1RB42DPL"}
+{"title":"Auto Service","desc":"m lkmlecmlkecm elk clkec lke ckem clk elck elck lekmc lkecm elkmclekmc lkecm rkc lkjr fclk frclk clkm fr,mc k lk lekmclekmc edmclkecm lemclkemc edcmkelcmkel ckmedk cemcecmkrm clkrmclk rflc lrkmfclkrmc lkmflckmrlkcmklrkcm rkmckrklr lrlmfrlkmfrlckmlrkmclrmflrmllkf","dueDate":"2018-06-13","priority":"1","_id":"tXQE5IXyMcNdSbKv"}
