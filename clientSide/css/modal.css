@@ -14,20 +14,9 @@
 }
 
 /* Modal Content */
-/* light style */
-.modal-content.light {
+.modal-content {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 60%;
-}
-/* dark style */
-.modal-content.dark {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #fff;
-    background-color:darkslategray;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -87,4 +76,21 @@
 
 input:invalid, textarea:required:invalid{
     border: 2px solid red;
+}
+.light #newNoteModal > div > header {
+    background-color: #d5db76;
+}
+
+.light #newNoteModal > div > header > h3{
+    color: #334a99;
+    text-align: center;
+}
+
+.dark #newNoteModal > div > header {
+    background-color: #334a99;
+}
+
+.dark #newNoteModal > div > header > h3{
+    color: #cccccc;
+    text-align: center;
 }

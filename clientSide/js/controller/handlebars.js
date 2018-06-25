@@ -41,9 +41,9 @@ Handlebars.registerHelper("checkedIf", function (condition) {
 
 // to show the priority level with exclamation-triangles
 Handlebars.registerHelper("markedPriority", function (priority) {
-    return '<span class="fa fa-exclamation-triangle checked"></span>'.repeat(+priority);
+    return '<span class="fa fa-exclamation-triangle checked">&nbsp;</span>'.repeat(+priority);
 });
 
 Handlebars.registerHelper("unmarkedPriority", function (priority) {
-    return '<span class="fa fa-exclamation-triangle"></span>'.repeat(3 - +priority);
+    return '<span class="fa fa-exclamation-triangle">&nbsp;</span>'.repeat(3 - +priority);
 });

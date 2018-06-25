@@ -71,7 +71,7 @@
                 </div>
                 <div class="box">
                     <label for="desc">Description</label>
-                    <textarea name="Beschreibung" id="desc" cols="30" rows="5" required></textarea>
+                    <textarea name="Description" id="desc" cols="30" rows="5" required></textarea>
                 </div>
                 <div class="box">
                     <label for="desc">Priority</label>
@@ -87,7 +87,7 @@
                 </div>
                 <div>
                     <button id="cancelBtn" class="close button">Cancel</button>
-                    <button id="btnSaveNote" class="save-button button">Save</button>
+                    <button id="btnSaveNote" class="save-button button" type="submit">Save</button>
                 </div>
             </form>
         </div>
@@ -126,8 +126,10 @@
                     </div>
                 </div>
                 <div class="">
-                    <button class="btn button editBtn" data-id='{{_id}}' type="submit">Edit</button>
-                    <button class="btn button deleteBtn" data-id='{{_id}}' type="submit">Delete</button>
+                    <button class="btn button editBtn" data-id='{{_id}}' type="submit">
+                        <i class="fa fa-edit" aria-hidden="true"></i>&nbsp;Edit</button>
+                    <button class="btn button deleteBtn redBtn" data-id='{{_id}}' type="submit">
+                        <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete</button>
                 </div>
             </div>
         </div>

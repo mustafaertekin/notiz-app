@@ -46,21 +46,13 @@
     display: flex;
     flex-direction: row;
     flex:1;
-    min-height: 50px;
+    min-height: 60px;
 }
 
-.handlebars-template .second-row > div{
-    display: flex;
-    flex-direction: row;
-    flex:1; 
-}
 
-.handlebars-template .second-row .is-finished{
-    flex: 1;
-}
 
 .handlebars-template .second-row .desc {
-    flex: 4;
+    flex: 3;
 }
 
 .handlebars-template .second-row .list-desc {
@@ -84,5 +76,10 @@
 #desc-area {
     overflow-y: scroll;
     height: 50x;
-    resize: none;
+    resize: vertical;
+}
+
+.priorityStars {
+    margin-right: 30px;
+    font-size: x-large;
 }
