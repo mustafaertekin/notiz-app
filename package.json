@@ -1,0 +1,20 @@
+{
+  "name": "my-note",
+  "version": "1.0.0",
+  "description": "CAS-FEE Projekt 1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mustafaertekin/notiz-app"
+  },
+  "author": "Mustafa Ertekin",
+  "license": "MIT",
+  "homepage": "https://github.com/mustafaertekin/notiz-app",
+  "dependencies": {
+    "handlebars": "^4.0.11",
+    "serve": "^6.5.8"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others \"node index.js\" \"node rest-api/bin/www\""
+  }
+}

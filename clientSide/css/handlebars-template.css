@@ -1,0 +1,82 @@
+.handlebars-template{
+    background: #b88e1c;
+    padding: 10px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color:white;
+}
+
+.dark .handlebars-template{
+    background: #b3b863;
+    color: #334a99;
+}
+
+.handlebars-template .first-row{
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    height: 50px;
+}
+
+.handlebars-template .first-row .due-date{
+    flex: 1;
+    align-items: center;
+}
+
+.handlebars-template .first-row .middle{
+    flex: 4;
+    align-items: center;
+}
+
+.handlebars-template .first-row .middle .description{
+    flex: 4;
+    align-items: left;
+}
+
+.handlebars-template .first-row .middle .priority{
+    flex: 1;
+    align-items: center;
+}
+
+.handlebars-template .first-row .empty{
+    flex: 1;
+}
+
+.handlebars-template .second-row{
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    min-height: 50px;
+}
+
+.handlebars-template .second-row > div{
+    display: flex;
+    flex-direction: row;
+    flex:1; 
+}
+
+.handlebars-template .second-row .is-finished{
+    flex: 1;
+}
+
+.handlebars-template .second-row .desc {
+    flex: 4;
+}
+
+.handlebars-template .second-row .list-desc {
+    background: rgb(228, 228, 228);
+    color: rgb(39, 2, 109);
+    flex: 1;
+    overflow: hidden;
+    padding: 10px 10px;
+    /* you need to remove this and adjust heigh with javascript*/
+    height: 50px;
+    border-radius: 4px;
+}
+
+
+.handlebars-template .second-row .edit-container{
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}

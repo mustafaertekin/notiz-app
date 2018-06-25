@@ -1,0 +1,28 @@
+/* GRID Areas declarations */
+.top-bar {
+    grid-area: top-bar;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav {
+    grid-area: nav;
+}
+
+.content {
+    grid-area: content;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #cccccc;
+}
+
+.main {
+    grid-gap: 10px;
+    grid-template-columns: 200px auto 200px;
+    grid-template-areas:
+            "top-bar  top-bar  top-bar"
+            "nav content content"
+            "footer footer footer";
+}
