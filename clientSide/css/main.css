@@ -1,15 +1,5 @@
-@import "handlebars-template.css";
-@import "grids.css";
-@import "styles.css";
-@import "buttons.css";
-@import "modal.css";
-
-.main {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid darkseagreen;
-    color: #444;
-    margin: 0 auto;
-    display: grid;
-    width: 90%;
-}
+@import "./handlebars-template.css";
+@import "./grids.css";
+@import "./styles.css";
+@import "./buttons.css";
+@import "./modal.css";

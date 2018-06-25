@@ -52,7 +52,6 @@
                 .then((response) => {
                     const selected = response.data;
                     selected.isFinished = isChecked;
-                    console.log(selected);
                     selected.checkedFinished = new Date();
                     storage
                         .UpdateNote(selected)
@@ -61,5 +60,6 @@
 
         }
     })
-    
+
+    // this function is initially called to render the existing notes
     helper.renderTodos();

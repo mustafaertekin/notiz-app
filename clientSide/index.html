@@ -25,24 +25,24 @@
             </nav>
 
             <nav id="nav" class="box left-side">
-                    <div>
-                        <p>Show finished notes</p>
-                        <label class="switch">
-                            <input id="showFinished" type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <button id="sortByFinishedDate" class="leftBtn greenBtn">By due date
-                        <i class="fas fa-sort-down"></i>
-                    </button>
-                    <button id="sortByCreatedDate" class="leftBtn redBtn">By created date
-                        <i class="fas fa-sort-down"></i>
-                    </button>
-                    </button>
-                    <button id="sortByPriority" class="leftBtn blueBtn">By Priority
-                        <i class="fas fa-sort-down"></i>
-                    </button>
-                    </button>
+                <div>
+                    <p>Show finished notes</p>
+                    <label class="switch">
+                        <input id="showFinished" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <button id="sortByFinishedDate" class="leftBtn greenBtn">By due date
+                    <i class="fas fa-sort-down"></i>
+                </button>
+                <button id="sortByCreatedDate" class="leftBtn redBtn">By created date
+                    <i class="fas fa-sort-down"></i>
+                </button>
+                </button>
+                <button id="sortByPriority" class="leftBtn blueBtn">By Priority
+                    <i class="fas fa-sort-down"></i>
+                </button>
+                </button>
             </nav>
 
             <div id="container" class="content">
@@ -50,7 +50,7 @@
                 <div id="content"></div>
             </div>
             <footer class="box">
-                <p>Constructed by Mustafa Ertekin<br>CAS-FEE-2018 Project 1</p>
+                <p>CAS-FEE-2018 Project 1 - Constructed by Mustafa Ertekin</p>
             </footer>
         </main>
 
@@ -100,8 +100,11 @@
         {{#each this}}
         <div class="handlebars-template">
             <div class="due-date"><input class="is-finished" data-id="{{_id}}" type="checkbox" {{checkedIf isFinished}}>
-                <span>Finished</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>Finished</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 Due Date: {{formatDate dueDate "DD.MM.YYYY"}}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Created Date: {{formatDate createdDate "DD.MM.YYYY"}}
             </div>
             <div class="first-row">
                 <div></div>

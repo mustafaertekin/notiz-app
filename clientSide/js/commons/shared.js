@@ -1,3 +1,4 @@
+// Revealing Module Pattern (less use of the global scope)
 var commons =
     ( function(){
 
@@ -42,6 +43,7 @@ var commons =
             });
         });
 
+        // Can be reached the LocalStorageService so: "commons.LocalStorageService"
         return {
             LocalStorageService,
         };

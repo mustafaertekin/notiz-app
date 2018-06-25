@@ -84,14 +84,16 @@ input:checked + .slider:before {
 
 /* Left Side Button Styles */
 .leftBtn {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
-    margin: 10px;
+    margin-top: 20px;
     color: white;
-    padding: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     font-weight: bold;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 3px 5px #888888;
 }
 
 .greenBtn {

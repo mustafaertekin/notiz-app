@@ -27,21 +27,19 @@ function handleBarHelper() {
 
 Handlebars.registerHelper("formatDate", function (datetime, format) {
     if (moment) { 
-       return moment(datetime).format(format); 
+        return moment(datetime).format(format);
     }
     else {
         return datetime;
     }
 });
 
+// checkbox Finished -> gets it's statement by this function
 Handlebars.registerHelper("checkedIf", function (condition) {
     return (condition) ? "checked" : "";
 });
 
-Handlebars.registerHelper("getCounter", function () {
-    return filterCounter;
-});
-
+// to show the priority level with exclamation-triangles
 Handlebars.registerHelper("markedPriority", function (priority) {
     return '<span class="fa fa-exclamation-triangle checked"></span>'.repeat(+priority);
 });

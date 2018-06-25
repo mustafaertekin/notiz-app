@@ -55,9 +55,6 @@ function NotesStorage () {
 
     this.deleteNoteById = (id) => {
         return remove(id);
-        /*let notes = myLocalStorage.getItem('notes');
-        notes = notes.filter(item => item.id != id);
-        myLocalStorage.setItem("notes", notes);*/
     }
 }
 

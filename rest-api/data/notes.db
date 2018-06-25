@@ -1,12 +1,9 @@
-{"title":"rrrrrr","desc":"eeeeee","dueDate":"2018-06-16","priority":"1","_id":"IYYisDww0ATvdymv"}
-{"title":"eee","desc":"eee","dueDate":"1111-12-12","priority":"2","_id":"g5dtyamZEjJoMIRh"}
-{"title":"eee","desc":"eee","dueDate":"1111-12-12","priority":"2","_id":"g5dtyamZEjJoMIRh","isFinished":true,"checkedFinished":"2018-06-25T00:04:58.062Z"}
-{"title":"eee","desc":"eee","dueDate":"1111-12-12","priority":"2","_id":"g5dtyamZEjJoMIRh","isFinished":false,"checkedFinished":"2018-06-25T00:04:59.046Z"}
-{"title":"eee","desc":"eee","dueDate":"1111-12-12","priority":"2","_id":"g5dtyamZEjJoMIRh","isFinished":true,"checkedFinished":"2018-06-25T00:21:02.718Z"}
-{"title":"eee","desc":"eee","dueDate":"1111-12-12","priority":"2","_id":"g5dtyamZEjJoMIRh","isFinished":false,"checkedFinished":"2018-06-25T00:21:03.657Z"}
-{"title":"eee","desc":"eee","dueDate":"1111-12-12","priority":"2","_id":"g5dtyamZEjJoMIRh","isFinished":true,"checkedFinished":"2018-06-25T00:21:04.341Z"}
-{"title":"eee","desc":"eee","dueDate":"1111-12-12","priority":"2","_id":"g5dtyamZEjJoMIRh","isFinished":false,"checkedFinished":"2018-06-25T00:21:05.248Z"}
 {"title":"eee","desc":"eee","dueDate":"1111-12-12","priority":"2","_id":"g5dtyamZEjJoMIRh","isFinished":true,"checkedFinished":"2018-06-25T00:21:07.310Z"}
-{"title":"rrrrrr","desc":"eeeeee","dueDate":"2018-06-16","priority":"1","_id":"IYYisDww0ATvdymv","isFinished":true,"checkedFinished":"2018-06-25T00:22:20.184Z"}
-{"title":"rrrrrr","desc":"eeeeee","dueDate":"2018-06-16","priority":"1","_id":"IYYisDww0ATvdymv","isFinished":false,"checkedFinished":"2018-06-25T00:22:20.977Z"}
-{"$$deleted":true,"_id":"IYYisDww0ATvdymv"}
+{"title":"test1","desc":"ooo","dueDate":"2018-06-07","priority":"1","_id":"k4hAscxKiULRFEBe"}
+{"title":"Sample Note 1","desc":"Lorem ipsum...","dueDate":"2018-06-14","priority":"3","_id":"Zxv3AHtF0SHId8By"}
+{"$$deleted":true,"_id":"g5dtyamZEjJoMIRh"}
+{"$$deleted":true,"_id":"k4hAscxKiULRFEBe"}
+{"title":"3333","desc":"ededed","dueDate":"1111-11-11","priority":"1","_id":"MBlRkTLpqqcemsA6"}
+{"_id":"MBlRkTLpqqcemsA6","title":"Sample Note 2","desc":"This is the description of note 2","dueDate":"2018-06-22","priority":"2"}
+{"_id":"MBlRkTLpqqcemsA6","title":"Sample Note 2","desc":"This is the description of note 2","dueDate":"2018-06-22","priority":"2","isFinished":true,"checkedFinished":"2018-06-25T02:15:44.175Z"}
+{"title":"Sample Note 3","desc":"Todo or not Todo..","dueDate":"2018-06-28","priority":"1","_id":"j6joqowzAqFa48eU"}
