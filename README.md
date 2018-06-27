@@ -21,6 +21,9 @@ Toggle button for style switch (dark <-> light)
 MyNote works with two seperate part: RestAPI and Client-Side
 
 ```bash
+# install concurrently to global (to multiple commands concurrently.)
+npm install -g concurrently
+
 # install client-side node packages
 npm install
 
