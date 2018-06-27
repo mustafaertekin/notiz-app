@@ -44,7 +44,7 @@ npm start
 ```  
   
   tested with:   
-  Chrome Version 67.0.3396.99  
+  Win 10, Chrome Version 67.0.3396.99  
   Mac OS, Version 67.0.3396.99 (64-Bit)
   
 Mustafa Ertekin - 2018
