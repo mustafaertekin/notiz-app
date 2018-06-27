@@ -1,25 +1,38 @@
 ﻿# MyNote
 ## CAS-FEE Project 1
-### Ein Notiz-App
 
-This is a notebook-app which saves the notes on NeDB-database and apply CRUD operations on them.
-
-MyNote works with two seperate part: RestAPI and Client-Side
+A notebook-app which saves the notes on NeDB-database and apply CRUD operations on them.
 
 ### Used Tecnhnologies
 Client-Side:
-Html, Css, JavaScript, Jquery, Handelbars.js, moment.js
+Html, Css (no framework such as Bootstrap, Material etc.)  
+JavaScript, Jquery, Handelbars.js, moment.js
 
 Rest-API (Backend):
 Express.js, NeDB
 
 
-### Installation:
+## Setup
+MyNote works with two seperate part: RestAPI and Client-Side
 
-Go into root folder run "npm install"  
-Then "cd clientSide", and "npm install"  
-from the root folder call: "npm start"
+```bash
+# install client-side node packages
+npm install
 
-### It will start both;
-Client-Side port: http://localhost:3000  
-REST-API port: http://localhost:8000
+# install server-side node packages 
+cd rest-api
+\rest-api> npm install
+```
+
+## Start
+
+```bash
+# in the root folder run:
+npm start
+
+# It will start both;
+     Client-Side port: http://localhost:3000  
+     REST-API port: http://localhost:8000
+```  
+  
+Mustafa Ertekin - 2018
