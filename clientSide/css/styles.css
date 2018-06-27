@@ -39,7 +39,7 @@
     background-color: #e4fffc;
 }
 
-.dark .list-counter {
+.dark .list-counter, .dark .sortType {
     color: white;
 }
 

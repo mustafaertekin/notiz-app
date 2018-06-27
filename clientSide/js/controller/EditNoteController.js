@@ -28,11 +28,7 @@
                 .then(templateUtils.render)
                 .catch(console.error);
         }
-        else {
-            console.log("error");
-        }
     });
-
 
     // When the user clicks the edit button, it opens the modal for edit
     $('#container').on('click', '.editBtn', function (e) {
@@ -75,8 +71,7 @@
                 })
         });
 
-
-
+    // puts the initial values of the existing note to edit
     function putDetailsToModal(id) {
         noteService.getNoteById(id).then(noteData => {
             let note = noteData;
