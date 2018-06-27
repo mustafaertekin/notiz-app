@@ -11,6 +11,11 @@ JavaScript, Jquery, Handelbars.js, moment.js
 Rest-API (Backend):
 Express.js, NeDB
 
+### Features
+Create & Edit Note  
+Sord by due date, created date and finished date  
+Show / Hide finished notes  
+Toggle button for style switch (dark <-> light)
 
 ## Setup
 MyNote works with two seperate part: RestAPI and Client-Side
