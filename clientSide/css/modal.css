@@ -23,6 +23,10 @@
     width: 60%;
 }
 
+
+.show-modal{
+    display:block;
+}
 /* The Close Button */
 .close {
     font-size: 1.2em;

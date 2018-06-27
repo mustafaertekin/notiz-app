@@ -6,11 +6,10 @@
     <meta charset="utf-8">
 
     <title>MyNote</title>
-    <meta name="MyNote" content="">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/commons/handlebars-v4.0.11.js"></script>
+
 
 </head>
 
@@ -67,11 +66,11 @@
                 <input type="hidden" id="id" />
                 <div class="box">
                     <label for="title">Title</label>
-                    <input id="title" type="text" required>
+                    <input id="title" type="text">
                 </div>
                 <div class="box">
                     <label for="desc">Description</label>
-                    <textarea name="Description" id="desc" cols="30" rows="5" required></textarea>
+                    <textarea name="Description" id="desc" cols="30" rows="5"></textarea>
                 </div>
                 <div class="box">
                     <label for="desc">Priority</label>
@@ -83,11 +82,11 @@
                 </div>
                 <div class="box">
                     <label for="dueDate">Due date:</label>
-                    <input id="dueDate" type="date" required>
+                    <input id="dueDate" type="date">
                 </div>
                 <div>
                     <button id="cancelBtn" class="close button">Cancel</button>
-                    <button id="btnSaveNote" class="save-button button" type="submit">Save</button>
+                    <button id="btnSaveNote" class="save-button button" type="button">Save</button>
                 </div>
             </form>
         </div>
@@ -96,8 +95,11 @@
 
     <!-- Handlebars Template -->
     <script id="notes-template" type="text/x-handlebars-template">
-        <h3 class="list-counter">Amount of listed notes: {{this.length}} </h3><br>
-        {{#each this}}
+        <div class="list-top-info">
+            <h3 class="list-counter">Amount of listed notes: {{list.length}} </h3>
+            <h3 class="sortType">Ordered by: <span>{{OrderBy orderBy}}</span> </h3>
+        </div>
+        {{#each list}}
         <div class="handlebars-template">
             <div class="due-date"><input class="is-finished" data-id="{{_id}}" type="checkbox" {{checkedIf isFinished}}>
                 <span>Finished</span>
@@ -140,13 +142,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
-    <script src="js/controller/handlebars.js"></script>
-    <script src="js/commons/shared.js"></script>
-    <script src="js/model/LocalStorageService.js"></script>
-    <script src="js/commons/HttpService.js"></script>
-    <script src="js/controller/main.js"></script>
-    <script src="js/controller/modal.js"></script>
-    <script src="js/controller/editNote.js"></script>
+    <script src="js/commons/handlebars-v4.0.11.js"></script>
+    <script src="js/model/services.js"></script>
+    <script src="js/view/template.js"></script>
+    <script src="js/controller/StyleSwitchController.js"></script>
+    <script src="js/controller/MainController.js"></script>
+    <script src="js/controller/EditNoteController.js"></script>
 
 
 </body>

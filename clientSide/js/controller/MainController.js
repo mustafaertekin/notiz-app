@@ -1,73 +1,46 @@
-let mainController =
-    (function ($, NoteService, storage, templateUtils) {
+(function ($, noteService, storage, templateUtils) {
 
-        let orderBy = 'priority';
-        let filterBy = '';
+    let toggleShowFinished = false;
 
-        const showFinished = $('#showFinished');
-        const deleteBtn = $('.deleteBtn');
-        const sortByFinishedDate = $('#sortByFinishedDate');
-        const sortByCreatedDate = $('#sortByCreatedDate');
-        const sortByPriority = $('#sortByPriority');
-        const isFinishedCheckbox = $(".is-finished");
-        const saveNote = $('#btnSaveNote');
-
-        let toogleShowFinished = false;
-
-        function renderNotes() {
-            NoteService.getAllNotes(orderBy, filterBy).then(templateUtils.renderTodos);
-        }
-
-        sortByCreatedDate.on('click', () => {
-            orderBy = 'due';
-            renderNotes();
-        });
-
-        sortByFinishedDate.on('click', () => {
-            orderBy = 'dueDate';
-            renderNotes();
-        });
-
-        sortByPriority.on('click', () => {
-            orderBy = 'priority';
-            renderNotes();
-        });
-
-        showFinished.on('click', () => {
-            toogleShowFinished = !toogleShowFinished;
-            filterBy = toogleShowFinished ? 'isFinished' : '';
-            renderNotes();
-        });
-
-        // TODO: remove it!
-        saveNote.on('click', () => {
-            editNoteController.saveAllDetails()
-                .then(renderNotes)
-                .catch(console.error)
-        });
-
-        $("#content")
-            .on("click", ".deleteBtn", () => {
-                NoteService
-                    .deleteNoteById(+$(this).data("id"))
-                    .then(renderNotes);
-            })
-            .on("click", ".is-finished", () => {
-                const isChecked = $(this).is(":checked");
-                NoteService
-                    .getNoteById(+$(this).data("id"))
-                    .then((response) => {
-                        const selected = response.data;
-                        selected.isFinished = isChecked;
-                        selected.checkedFinished = new Date();
-                        NoteService
-                            .updateNote(selected)
-                            .then(renderNotes)
-                    });
-            });
+    const showFinished = $('#showFinished');
+    const sortByFinishedDate = $('#sortByFinishedDate');
+    const sortByCreatedDate = $('#sortByCreatedDate');
+    const sortByPriority = $('#sortByPriority');
 
 
-        // this function is initially called to render the existing notes
-        renderNotes();
+    function init(){
+        let orderBy = storage.get("orderBy");
+        noteService.setOrderBy(orderBy).getAllNotes().then(templateUtils.render);
+    }
 
-    }(jQuery, services.NoteService, services.storage, templates.util));
+    sortByFinishedDate.on('click', () => {
+        noteService.setOrderBy('dueDate')
+            .getAllNotes()
+            .then((list) => templateUtils.render(list, "dueDate"));
+        storage.add("orderBy", "dueDate");
+    });
+
+    sortByCreatedDate.on('click', () => {
+        noteService.setOrderBy('createdDate')
+            .getAllNotes()
+            .then((list) => templateUtils.render(list, "createdDate"));
+        storage.add("orderBy", "createdDate");
+    });
+
+    sortByPriority.on('click', () => {
+        noteService.setOrderBy('priority')
+            .getAllNotes()
+            .then((list) => templateUtils.render(list, "priority"));
+        storage.add("orderBy", "priority");
+    });
+
+    showFinished.on('click', () => {
+        toggleShowFinished = !toggleShowFinished;
+        let filterBy = toggleShowFinished ? 'isFinished' : '';
+        noteService.setFilterBy(filterBy).getAllNotes().then(templateUtils.render);
+    });
+
+
+
+    init();
+}(jQuery, services.noteService, services.storage, templates.util));
