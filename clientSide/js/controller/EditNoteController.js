@@ -17,6 +17,7 @@
         let title = $('#title').val();
         let desc = $('#desc').val();
         let dueDate = $('#dueDate').val();
+        // returns true if title,desc,dueDate are all empty
         return title !== "" && desc !== "" && dueDate !== "";
     }
 
