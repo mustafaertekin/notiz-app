@@ -62,15 +62,15 @@
             <header>
                 <h3>Create New Note</h3>
             </header>
-            <form class="form">
+            <form id="editNoteForm" class="form">
                 <input type="hidden" id="id" />
                 <div class="box">
                     <label for="title">Title</label>
-                    <input id="title" type="text">
+                    <input id="title" type="text" required>
                 </div>
                 <div class="box">
                     <label for="desc">Description</label>
-                    <textarea name="Description" id="desc" cols="30" rows="5"></textarea>
+                    <textarea name="Description" id="desc" cols="30" rows="5" required></textarea>
                 </div>
                 <div class="box">
                     <label for="desc">Priority</label>
@@ -82,11 +82,11 @@
                 </div>
                 <div class="box">
                     <label for="dueDate">Due date:</label>
-                    <input id="dueDate" type="date">
+                    <input id="dueDate" type="date" required>
                 </div>
                 <div>
-                    <button id="cancelBtn" class="close button">Cancel</button>
-                    <button id="btnSaveNote" class="save-button button" type="button">Save</button>
+                    <button id="cancelBtn" class="close button" type="button">Cancel</button>
+                    <button id="btnSaveNote" class="save-button button" type="submit">Save</button>
                 </div>
             </form>
         </div>

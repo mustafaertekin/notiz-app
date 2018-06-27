@@ -31,18 +31,18 @@ let templates =
         });
 
         // prints the selected order type to the top of render-list
-        hbs.registerHelper("OrderBy", function (orderBy) {
-            if (orderBy === "dueDate") {
-                return "Due date"
-            }
-            if (orderBy === "createdDate"){
+        hbs.registerHelper("OrderBy", function (orderBy = services.noteService.orderBy || "default") {
+            if (orderBy === "dueDate")
+                return "Due date";
+
+            if (orderBy === "createdDate")
                 return "Created date";
-            }
-            if (orderBy === "priority") {
-                return "Priority"
-            } else {
-                return "Default"
-            }
+
+            if (orderBy === "priority")
+                return "Priority";
+
+            if (orderBy === "default")
+                return "Default";
         });
 
         return {

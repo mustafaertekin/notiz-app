@@ -13,12 +13,25 @@
         resetModalFields();
     });
 
+    function validateForm() {
+        let title = $('#title').val();
+        let desc = $('#desc').val();
+        let dueDate = $('#dueDate').val();
+        return title !== "" && desc !== "" && dueDate !== "";
+    }
+
     saveNote.on('click', () => {
-        saveAllDetails()
-            .then(noteService.getAllNotes)
-            .then(templateUtils.render)
-            .catch(console.error)
+        if(validateForm()) {
+            saveAllDetails()
+                .then(noteService.getAllNotes)
+                .then(templateUtils.render)
+                .catch(console.error);
+        }
+        else {
+            console.log("error");
+        }
     });
+
 
     // When the user clicks the edit button, it opens the modal for edit
     $('#container').on('click', '.editBtn', function (e) {
@@ -30,8 +43,8 @@
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target === modalNewNote) {
-            modalNewNote.style.display = "none";
+        if ($(event.target).is(modalNewNote)) {
+            $('#newNoteModal').hide();
         }
     };
 
@@ -47,8 +60,7 @@
             let id = $(e.target).data("id");
             noteService
                 .deleteNoteById(id)
-                .then(noteService.getAllNotes)
-                .then(templateUtils.render);
+                .then( ()=>window.location.reload() );
         })
         .on("click", ".is-finished", (e) => {
             const isChecked = $(e.target).is(":checked");
@@ -107,9 +119,10 @@
                     return note.identifier() ? noteService.updateNote(note) : noteService.createNote(note);
                 })
             .then(() => $('#newNoteModal').hide())
-            .then(noteService.getAllNotes)
-            .then(templateUtils.render)
+            .then( ()=>window.location.reload() )
             .catch(console.error);
+
+
 
     }
 
